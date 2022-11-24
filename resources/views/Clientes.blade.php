@@ -15,32 +15,22 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Telefono</th>
-                            <th>email</th>
+                            <th>Direccion</th>
                             <th>Acciones</th>
                         </tr>
-                        
+                        @foreach ($listado as $cliente)
 
                         <tr>
-                            <td>Maria </td>
-                            <td>Ramos</td>
-                            <td>98561231</td>
-                            <td>@Maria.gmail.com</td>
+                            <td>{{$cliente->contactFirstName}}</td>
+                            <td>{{$cliente->contactLastName}} </td>
+                            <td>{{$cliente->phone}}</td>
+                            <td>{{$cliente->addressLine1}}</td>
                             <td>
                                 <a href="#"class="btn btn-success">Editar</a>
                                 <a href="#"class="btn btn-success">Eliminar</a>
                             </td>
                         </tr>
-
-                        <tr>
-                            <td>Juan</td>
-                            <td>Lopes</td>
-                            <td>956412345</td>
-                            <td>@Juan.Hotmail.com</td>
-                            <td>
-                                <a href="#"class="btn btn-success">Editar</a>
-                                <a href="#"class="btn btn-success">Eliminar</a>
-                            </td>
-                        </tr>
+                        @endforeach
 
                     </table>
 
